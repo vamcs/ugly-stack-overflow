@@ -76,6 +76,6 @@ export interface ApiResponse<T> {
   quota_remaining: number;
 }
 
-export function convertEpochToDate(timestamp: string): Date {
-  return new Date(Number(timestamp) * 1000);
+export function convertLocaleStringDate(timestamp: string) {
+  return new Date(Number(timestamp) * 1000).toLocaleString();
 }
